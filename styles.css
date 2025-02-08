@@ -10,14 +10,36 @@ body {
   font-family: "Barlow Semi Condensed", serif;
 }
 
-/* Grid container */
-.container {
-  display: grid;
-  grid-template-columns: repeat(4, 2fr);
-  gap: 20px;
-  max-width: 1200px;
-  width: 100%;
-  margin: 0 auto;
+/* Mobile Layout (375px) */
+@media (max-width: 375px) {
+  .container {
+    display: grid;
+    grid-template-columns: 1fr; /* Stack the cards vertically */
+    gap: 20px;
+    max-width: 100%;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .card-one,
+  .card-two,
+  .card-three,
+  .card-four,
+  .card-five {
+    grid-column: span 1; /* Make each card take up 1 column */
+  }
+}
+
+/* Grid container and desktop layout (1440px)  */
+@media (min-width: 1440px) {
+  .container {
+    display: grid;
+    grid-template-columns: repeat(4, 2fr);
+    gap: 20px;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+  }
 }
 
 /* Separate card styling to ensure proper layout and background coloring */
@@ -48,7 +70,7 @@ body {
   grid-row: span 2;
 }
 
-/* Collective card styling */
+/* Collective card styling and Mobile card styles (375px) */
 .card-one,
 .card-two,
 .card-three,
