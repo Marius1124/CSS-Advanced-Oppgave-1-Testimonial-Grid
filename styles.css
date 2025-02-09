@@ -14,9 +14,26 @@ body {
   margin: 10px;
 }
 
+/* Wraps the elements to ensure they don't take up unnecessary space */
+.card-title,
+.portrait,
+h3,
+h5 {
+  width: fit-content;
+}
+
 .portrait img {
   border-radius: 50%;
-  border: 2px white solid;
+  width: 30px;
+}
+
+/* distinct borders to .card-one and .card-four */
+.card-one .portrait img {
+  border: 2px hsl(263, 55%, 70%) solid;
+}
+
+.card-four .portrait img {
+  border: 2px hsl(263, 55%, 52%) solid;
 }
 
 /* Grid container and desktop layout (1440px)  */
@@ -28,6 +45,73 @@ body {
     width: 100%;
     margin: 0 auto;
   }
+}
+
+/* header styling .header-one is for darker backgrounds (white text)
+.header-two is white background (darker texts) */
+.card-one h2,
+.card-two h2,
+.card-four h2 {
+  color: hsl(0, 0%, 100%);
+  font-weight: 600;
+}
+
+.card-three h2,
+.card-five h2 {
+  color: hsl(217, 19%, 35%);
+  font-weight: 700;
+}
+
+/* Name styling */
+.card-one h3,
+.card-two h3,
+.card-four h3 {
+  color: hsl(0, 0%, 100%);
+  font-weight: 500;
+}
+
+.card-three h3,
+.card-five h3 {
+  color: hsl(217, 19%, 35%);
+  font-weight: 500;
+}
+
+/* Verified Graduate title styling */
+.card-one h5,
+.card-two h5,
+.card-four h5 {
+  font-weight: 500;
+  color: hsl(0, 0%, 100%);
+  opacity: 50%;
+}
+
+.card-three h5,
+.card-five h5 {
+  font-weight: 500;
+  color: hsl(217, 19%, 35%);
+  opacity: 50%;
+}
+
+/* Paragraph styling */
+.card-one p,
+.card-two p,
+.card-four p {
+  line-height: 1.5;
+  letter-spacing: 0.8px;
+  font-weight: 400;
+  margin-top: 20px;
+  color: hsl(0, 0%, 100%);
+  opacity: 70%;
+}
+
+.card-three p,
+.card-five p {
+  line-height: 1.5;
+  letter-spacing: 0.8px;
+  font-weight: 500;
+  margin-top: 20px;
+  color: hsl(217, 19%, 35%);
+  opacity: 70%;
 }
 
 /* Separate card styling to ensure proper layout and background coloring */
@@ -66,7 +150,7 @@ body {
 .card-three,
 .card-four,
 .card-five {
-  padding: 20px;
+  padding: 30px;
   border-radius: 10px;
   margin: 10px;
 }
