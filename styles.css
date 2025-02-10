@@ -14,14 +14,17 @@ body {
   margin: 10px;
 }
 
-/* Wraps the elements to ensure they don't take up unnecessary space */
-.card-title,
-.portrait,
-h3,
-h5 {
-  width: fit-content;
+h2 {
+  margin-top: 14px;
 }
 
+/* Makes it so that name and verified title appears at the right side of the portrait */
+.person {
+  display: flex;
+  gap: 20px;
+}
+
+/* makes the portrait image round and sizes it appropriately */
 .portrait img {
   border-radius: 50%;
   width: 30px;
@@ -99,7 +102,7 @@ h5 {
   line-height: 1.5;
   letter-spacing: 0.8px;
   font-weight: 400;
-  margin-top: 20px;
+  margin-top: 30px;
   color: hsl(0, 0%, 100%);
   opacity: 70%;
 }
@@ -109,7 +112,7 @@ h5 {
   line-height: 1.5;
   letter-spacing: 0.8px;
   font-weight: 500;
-  margin-top: 20px;
+  margin-top: 30px;
   color: hsl(217, 19%, 35%);
   opacity: 70%;
 }
@@ -150,7 +153,7 @@ h5 {
 .card-three,
 .card-four,
 .card-five {
-  padding: 30px;
+  padding: 20px;
   border-radius: 10px;
   margin: 10px;
 }
